@@ -5,7 +5,9 @@ const port = 3000;
 app.set("view engine", "ejs"); // setting ejs as a view engine
 
 app.get("/", (req, res) => {
-  res.render("index"); // rendering index.ejs HTML file
+  // res.render("index"); // rendering index.ejs HTML file
+
+  res.render("index", { text: "World" }); // rendering HTML by sending info in object (can be anything) from our server down into views
 
   // res.send("hola, user"); // sending data to a user
   // res.sendStatus(500); // sending status code to a user
